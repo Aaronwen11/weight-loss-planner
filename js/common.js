@@ -813,3 +813,10 @@ const TAKEOUT_GUIDE = {
     '外卖蔬菜少就自己加一份水果或小番茄',
   ],
 };
+
+/* ---------------- PWA：Service Worker 注册（支持安装为 App） ---------------- */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(() => { /* file:// 或受限环境静默失败 */ });
+  });
+}
