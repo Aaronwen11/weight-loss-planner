@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fdf7ec"/><stop offset="1" stop-color="#f3e7d2"/>
+    </linearGradient>
+    <linearGradient id="bowl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#efe6d6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" rx="40" fill="url(#bg)"/>
+  <ellipse cx="400" cy="560" rx="250" ry="28" fill="#d9cbb2" opacity="0.45"/>
+  <circle cx="400" cy="430" r="220" fill="#fbf8f1" stroke="#e6ddca" stroke-width="6"/>
+  <circle cx="400" cy="430" r="180" fill="#f3eee2"/>
+  <!-- 杂粮粥碗 -->
+  <path d="M150 470 a130 130 0 0 1 260 0 z" fill="url(#bowl)" stroke="#d9cbb2" stroke-width="6"/>
+  <ellipse cx="280" cy="470" rx="130" ry="26" fill="#e8ddc8" stroke="#d9cbb2" stroke-width="5"/>
+  <ellipse cx="280" cy="462" rx="112" ry="20" fill="#c9a86b"/>
+  <ellipse cx="262" cy="458" rx="16" ry="9" fill="#d8bb86"/>
+  <ellipse cx="300" cy="462" rx="12" ry="7" fill="#b89055"/>
+  <path d="M225 340 q-12 -34 10 -58" stroke="#c9b797" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M320 320 q14 -38 44 -44" stroke="#c9b797" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <!-- 水煮蛋 -->
+  <ellipse cx="510" cy="455" rx="74" ry="56" fill="#fffdf7" stroke="#d8cfbc" stroke-width="5"/>
+  <ellipse cx="510" cy="455" rx="50" ry="37" fill="#f6d56b"/>
+  <ellipse cx="510" cy="452" rx="24" ry="18" fill="#f8bd3d"/>
+  <!-- 全麦馒头 -->
+  <path d="M520 560 q60 -8 96 24 q-20 70 -96 62 q-66 -6 -88 -52 q30 -26 88 -34 z" fill="#e3b877"/>
+  <path d="M540 588 q34 -12 60 -2" stroke="#c9954f" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- 筷子 -->
+  <line x1="150" y1="300" x2="300" y2="520" stroke="#a06a3f" stroke-width="10" stroke-linecap="round"/>
+  <line x1="195" y1="300" x2="345" y2="520" stroke="#8a5730" stroke-width="10" stroke-linecap="round"/>
+</svg>
