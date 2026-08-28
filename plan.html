@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI 体重管理 · 专属方案</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">🍃 轻计划 · BMI 体重管理</div>
+      <nav class="site-nav">
+        <a href="index.html">1 问卷</a>
+        <a href="plan.html" class="active">2 方案</a>
+        <a href="checkin.html">3 打卡</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="storage-warning" class="banner banner-warn" style="display:none">
+    ⚠️ 当前浏览器无法使用本地存储（file:// 或隐私模式），数据仅在本次页面会话内有效。
+  </div>
+
+  <main class="container">
+    <div id="plan-content"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">🍃 轻计划 · 数据仅保存在你的浏览器本地</div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/plan.js"></script>
+</body>
+</html>
