@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e7f3f8"/><stop offset="1" stop-color="#cfe6ef"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" rx="40" fill="url(#bg)"/>
+  <ellipse cx="400" cy="620" rx="300" ry="26" fill="#b5d3de" opacity="0.6"/>
+  <!-- 太阳 -->
+  <circle cx="620" cy="200" r="56" fill="#f6c84b"/>
+  <g stroke="#f6c84b" stroke-width="9" stroke-linecap="round">
+    <line x1="620" y1="118" x2="620" y2="92"/>
+    <line x1="700" y1="160" x2="722" y2="146"/>
+    <line x1="700" y1="240" x2="722" y2="254"/>
+    <line x1="540" y1="160" x2="518" y2="146"/>
+    <line x1="540" y1="240" x2="518" y2="254"/>
+  </g>
+  <!-- 瑜伽垫 -->
+  <rect x="120" y="590" width="460" height="34" rx="17" fill="#2c8c63"/>
+  <rect x="120" y="590" width="460" height="12" rx="6" fill="#3aa76d"/>
+  <!-- 拉伸人物（站姿体前屈） -->
+  <g>
+    <circle cx="350" cy="300" r="40" fill="#f2c39b"/>
+    <path d="M324 284 q26 -34 54 -8 q8 18 2 38 q-28 6 -56 -30 z" fill="#5a4028"/>
+    <!-- 躯干前屈 -->
+    <path d="M340 336 q-46 84 -10 160 l24 6 q-34 -72 8 -142 z" fill="#2c8c63"/>
+    <!-- 腿 -->
+    <path d="M330 496 l-4 76 h24 l4 -76 z" fill="#245c43"/>
+    <path d="M330 496 l6 76 h24 l-4 -76 z" fill="#2c5d47"/>
+    <!-- 鞋 -->
+    <path d="M320 570 h34 l-2 16 h-32 z" fill="#fff"/>
+    <path d="M332 570 h34 l-2 16 h-32 z" fill="#e8f0ea"/>
+    <!-- 手臂前伸 -->
+    <path d="M342 372 q-10 46 -44 66 l-16 -18 q30 -18 38 -56 z" fill="#f2c39b"/>
+    <path d="M346 376 q4 46 -20 70 l-18 -14 q20 -20 16 -62 z" fill="#f2c39b"/>
+  </g>
+  <!-- 拉伸指示弧线 -->
+  <path d="M430 380 q70 -30 110 -80" stroke="#4aa3c2" stroke-width="9" fill="none" stroke-linecap="round" stroke-dasharray="2 26"/>
+  <!-- 叶片 -->
+  <g fill="#3aa76d">
+    <path d="M560 520 q26 -70 74 -90 q-6 78 -48 104 q-30 6 -26 -14 z"/>
+    <path d="M590 500 q10 -34 34 -46 q-2 36 -22 50 q-14 4 -12 -4 z" fill="#5bbd85"/>
+  </g>
+</svg>
