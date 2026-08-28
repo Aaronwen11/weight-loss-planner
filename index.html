@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI 体重管理 · 问卷</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">🍃 轻计划 · BMI 体重管理</div>
+      <nav class="site-nav">
+        <a href="index.html" class="active">1 问卷</a>
+        <a href="plan.html">2 方案</a>
+        <a href="checkin.html">3 打卡</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="storage-warning" class="banner banner-warn" style="display:none">
+    ⚠️ 当前浏览器无法使用本地存储（file:// 或隐私模式），数据仅在本次页面会话内有效，刷新可能丢失。
+  </div>
+
+  <div class="container">
+    <div id="prefill-banner" class="prefill-bar" style="display:none">
+      <span>💾 已载入上次填写的数据，无需重新填写问卷</span>
+      <a href="plan.html" class="btn btn-mini btn-primary">查看我的方案 →</a>
+      <a href="checkin.html" class="btn btn-mini btn-ghost">去打卡 →</a>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="hero">
+      <h1>告诉我你的情况，<br>为你定制专属减肥方案</h1>
+      <p class="hero-sub">根据身高、体重、年龄、职业与生活习惯，综合计算你的身体数据，并生成饮食 + 运动计划。</p>
+    </section>
+
+    <form id="survey-form" class="card form-card" novalidate>
+      <h2>基本信息</h2>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="height">身高（cm）<span class="req">*</span></label>
+          <input type="number" id="height" name="height" min="100" max="250" step="0.1" placeholder="例如 170" required>
+          <p class="field-error" id="err-height"></p>
+        </div>
+        <div class="form-group">
+          <label for="weight">体重（kg）<span class="req">*</span></label>
+          <input type="number" id="weight" name="weight" min="20" max="300" step="0.1" placeholder="例如 70" required>
+          <p class="field-error" id="err-weight"></p>
+        </div>
+        <div class="form-group">
+          <label for="age">年龄（岁）<span class="req">*</span></label>
+          <input type="number" id="age" name="age" min="10" max="100" step="1" placeholder="例如 28" required>
+          <p class="field-error" id="err-age"></p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>性别 <span class="req">*</span></label>
+        <div class="radio-group" id="gender-group">
+          <label class="radio-card"><input type="radio" name="gender" value="male" required> <span>👨 男</span></label>
+          <label class="radio-card"><input type="radio" name="gender" value="female" required> <span>👩 女</span></label>
+        </div>
+        <p class="field-error" id="err-gender"></p>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="occupation">职业类型 <span class="req">*</span></label>
+          <select id="occupation" name="occupation" required>
+            <option value="">请选择</option>
+            <option value="sedentary">久坐办公（程序员、文员、客服等）</option>
+            <option value="standing">站立工作（销售、教师、医护等）</option>
+            <option value="student">学生</option>
+            <option value="retired">退休</option>
+            <option value="physical">体力劳动（建筑、物流等）</option>
+          </select>
+          <p class="field-error" id="err-occupation"></p>
+        </div>
+        <div class="form-group">
+          <label for="exerciseFreq">每周运动频率 <span class="req">*</span></label>
+          <select id="exerciseFreq" name="exerciseFreq" required>
+            <option value="">请选择</option>
+            <option value="none">几乎不运动</option>
+            <option value="rare">每周 1–2 次</option>
+            <option value="regular">每周 3–4 次</option>
+            <option value="high">每周 5 次以上</option>
+          </select>
+          <p class="field-error" id="err-exerciseFreq"></p>
+        </div>
+      </div>
+
+      <h2>目标与偏好</h2>
+
+      <div class="form-group">
+        <label>你的主要目标 <span class="req">*</span></label>
+        <div class="radio-group" id="goal-group">
+          <label class="radio-card"><input type="radio" name="goal" value="fat_loss" required> <span>🔥 减脂</span></label>
+          <label class="radio-card"><input type="radio" name="goal" value="muscle_gain"> <span>💪 增肌</span></label>
+          <label class="radio-card"><input type="radio" name="goal" value="body_shape"> <span>🧘 塑形</span></label>
+          <label class="radio-card"><input type="radio" name="goal" value="maintain"> <span>🌿 保持健康</span></label>
+        </div>
+        <p class="field-error" id="err-goal"></p>
+        <div id="goal-hint" class="alert alert-warn" style="display:none"></div>
+      </div>
+
+      <div class="form-group">
+        <label>饮食习惯（用于生成饮食方案） <span class="req">*</span></label>
+        <div class="radio-group" id="diet-group">
+          <label class="radio-card"><input type="radio" name="dietStyle" value="zh" required> <span>🍚 中餐</span></label>
+          <label class="radio-card"><input type="radio" name="dietStyle" value="en"> <span>🥗 西餐</span></label>
+        </div>
+        <p class="field-error" id="err-dietStyle"></p>
+      </div>
+
+      <div class="form-group">
+        <label>是否会自己做饭 <span class="req">*</span></label>
+        <div class="radio-group" id="cook-group">
+          <label class="radio-card"><input type="radio" name="canCook" value="yes" required> <span>🍳 会做饭</span></label>
+          <label class="radio-card"><input type="radio" name="canCook" value="no"> <span>🥡 不会做饭（外卖 / 食堂为主）</span></label>
+        </div>
+        <p class="field-error" id="err-canCook"></p>
+        <p class="hint">选择「不会做饭」时，方案会额外给出健康外卖点餐建议；学生用户还会看到食堂 / 宿舍能吃与不能吃指南。</p>
+      </div>
+
+      <div class="form-group">
+        <label>忌口 / 慢性病（可多选，用于调整建议）</label>
+        <div class="checkbox-group">
+          <label class="checkbox-card"><input type="checkbox" name="chronic" value="hypertension"> <span>高血压</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="chronic" value="diabetes"> <span>糖尿病</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="chronic" value="gout"> <span>痛风</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="chronic" value="none"> <span>无特殊</span></label>
+        </div>
+        <p class="hint">如勾选「无特殊」，其他项会被清除；如选择「其他」，请在下框填写。</p>
+        <input type="text" id="otherChronic" placeholder="其他忌口或身体情况（可选），例如：乳糖不耐受、食物过敏">
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block btn-lg">生成我的专属方案 →</button>
+      <p class="form-note">本工具仅提供通用健康参考，不构成医疗建议。</p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">🍃 轻计划 · 数据仅保存在你的浏览器本地</div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script>
+    'use strict';
+    const $ = id => document.getElementById(id);
+    showStorageWarning();
+
+    // 免重填：载入上次保存的问卷数据
+    (function prefillForm() {
+      const u = Store.get(KEYS.USER);
+      if (!u) return;
+      if (u.heightCm) $('height').value = u.heightCm;
+      if (u.weightKg) $('weight').value = u.weightKg;
+      if (u.age) $('age').value = u.age;
+      if (u.gender) {
+        const r = document.querySelector('input[name="gender"][value="' + u.gender + '"]');
+        if (r) r.checked = true;
+      }
+      if (u.occupation) $('occupation').value = u.occupation;
+      if (u.exerciseFreq) $('exerciseFreq').value = u.exerciseFreq;
+      if (u.goal) {
+        const g = document.querySelector('input[name="goal"][value="' + u.goal + '"]');
+        if (g) g.checked = true;
+      }
+      if (u.dietStyle) {
+        const d = document.querySelector('input[name="dietStyle"][value="' + u.dietStyle + '"]');
+        if (d) d.checked = true;
+      }
+      if (u.canCook) {
+        const c = document.querySelector('input[name="canCook"][value="' + u.canCook + '"]');
+        if (c) c.checked = true;
+      }
+      if (Array.isArray(u.chronic)) {
+        u.chronic.forEach(v => {
+          const cb = document.querySelector('input[name="chronic"][value="' + v + '"]');
+          if (cb) cb.checked = true;
+        });
+      }
+      if (u.other) $('otherChronic').value = u.other;
+      const banner = $('prefill-banner');
+      if (banner) banner.style.display = 'flex';
+      updateGoalHint();
+    })();
+
+    function setError(id, msg) {
+      $(id).textContent = msg;
+    }
+    function clearErrors() {
+      ['height', 'weight', 'age', 'gender', 'occupation', 'exerciseFreq', 'goal', 'dietStyle'].forEach(k => setError('err-' + k, ''));
+    }
+
+    function validateNumber(id, min, max, label) {
+      const v = parseFloat($(id).value);
+      if ($(id).value.trim() === '' || isNaN(v)) { setError('err-' + id, '请填写' + label); return null; }
+      if (v < min || v > max) { setError('err-' + id, label + '需在 ' + min + '–' + max + ' 之间'); return null; }
+      setError('err-' + id, '');
+      return v;
+    }
+    function validateRadio(name, errId, label) {
+      const v = document.querySelector('input[name="' + name + '"]:checked');
+      if (!v) { setError(errId, '请选择' + label); return null; }
+      setError(errId, '');
+      return v.value;
+    }
+    function validateSelect(id, errId, label) {
+      const v = $(id).value;
+      if (!v) { setError(errId, '请选择' + label); return null; }
+      setError(errId, '');
+      return v;
+    }
+
+
+    // 实时提示：保持健康 + 超重/肥胖 → 建议减脂
+    function updateGoalHint() {
+      const hint = $('goal-hint');
+      const goal = document.querySelector('input[name="goal"]:checked');
+      const h = parseFloat($('height').value);
+      const w = parseFloat($('weight').value);
+      if (!hint || !goal || goal.value !== 'maintain' || isNaN(h) || isNaN(w) || h < 100 || h > 250 || w < 20 || w > 300) {
+        if (hint) hint.style.display = 'none';
+        return;
+      }
+      const bmi = calcBMI(w, h);
+      const cat = bmiCategory(bmi);
+      if (cat.key === 'overweight' || cat.key === 'obese') {
+        hint.innerHTML = '💡 你的 BMI 为 <b>' + bmi.toFixed(1) + '</b>（' + cat.label + '）。选择「保持健康」将<b>自动调整为「减脂」目标</b>，以更有效地管理体重。';
+        hint.style.display = 'block';
+      } else {
+        hint.style.display = 'none';
+      }
+    }
+    ['height', 'weight'].forEach(id => {
+      $(id).addEventListener('input', updateGoalHint);
+      $(id).addEventListener('change', updateGoalHint);
+    });
+    document.querySelectorAll('input[name="goal"]').forEach(r => r.addEventListener('change', updateGoalHint));
+
+    // 慢性病勾选：选「无特殊」时清除其他
+    document.querySelectorAll('input[name="chronic"]').forEach(cb => {
+      cb.addEventListener('change', () => {
+        if (cb.value === 'none' && cb.checked) {
+          document.querySelectorAll('input[name="chronic"]').forEach(o => { if (o.value !== 'none') o.checked = false; });
+        }
+        if (cb.value !== 'none' && cb.checked) {
+          const none = document.querySelector('input[name="chronic"][value="none"]');
+          if (none) none.checked = false;
+        }
+      });
+    });
+
+    $('survey-form').addEventListener('submit', e => {
+      e.preventDefault();
+      clearErrors();
+
+      const height = validateNumber('height', 100, 250, '身高');
+      const weight = validateNumber('weight', 20, 300, '体重');
+      const age = validateNumber('age', 10, 100, '年龄');
+      if (height === null || weight === null || age === null) return;
+
+      const gender = validateRadio('gender', 'err-gender', '性别');
+      const goal = validateRadio('goal', 'err-goal', '目标');
+      const dietStyle = validateRadio('dietStyle', 'err-dietStyle', '饮食习惯');
+      const canCook = validateRadio('canCook', 'err-canCook', '是否会做饭');
+      if (!gender || !goal || !dietStyle || !canCook) return;
+
+      const occupation = validateSelect('occupation', 'err-occupation', '职业类型');
+      const exerciseFreq = validateSelect('exerciseFreq', 'err-exerciseFreq', '运动频率');
+      if (!occupation || !exerciseFreq) return;
+
+      const chronic = [];
+      document.querySelectorAll('input[name="chronic"]:checked').forEach(cb => chronic.push(cb.value));
+      const other = $('otherChronic').value.trim();
+
+      const user = {
+        heightCm: height,
+        weightKg: weight,
+        age,
+        gender,
+        occupation,
+        exerciseFreq,
+        goal,
+        dietStyle,
+        canCook,
+        chronic,
+        other: other || null,
+        updatedAt: new Date().toISOString(),
+      };
+
+      const { user: finalUser } = maybeAdjustGoal(user);
+      const plan = buildPlan(finalUser);
+      Store.set(KEYS.USER, finalUser);
+      Store.set(KEYS.PLAN, plan);
+      window.location.href = 'plan.html';
+    });
+  </script>
+</body>
+</html>
