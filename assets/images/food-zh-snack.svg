@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fdf7ec"/><stop offset="1" stop-color="#f3e7d2"/>
+    </linearGradient>
+    <linearGradient id="cup" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e9e2f0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" rx="40" fill="url(#bg)"/>
+  <ellipse cx="400" cy="570" rx="250" ry="28" fill="#d9cbb2" opacity="0.45"/>
+  <circle cx="400" cy="430" r="220" fill="#fbf8f1" stroke="#e6ddca" stroke-width="6"/>
+  <circle cx="400" cy="430" r="178" fill="#f2ecdf"/>
+  <!-- 无糖酸奶杯 -->
+  <path d="M250 340 l30 180 a90 90 0 0 0 180 0 l30 -180 z" fill="url(#cup)" stroke="#cbbfd8" stroke-width="6"/>
+  <ellipse cx="370" cy="340" rx="90" ry="24" fill="#efe9f5" stroke="#cbbfd8" stroke-width="5"/>
+  <ellipse cx="370" cy="334" rx="74" ry="18" fill="#fffdf8"/>
+  <ellipse cx="360" cy="332" rx="26" ry="9" fill="#f7eefc"/>
+  <ellipse cx="385" cy="336" rx="16" ry="6" fill="#f7eefc"/>
+  <!-- 坚果 -->
+  <ellipse cx="520" cy="380" rx="24" ry="17" fill="#c98d4f" transform="rotate(-15 520 380)"/>
+  <path d="M520 366 q8 -14 22 -10 q6 14 -6 22 q-16 6 -20 -5 z" fill="#a86c38"/>
+  <ellipse cx="570" cy="420" rx="22" ry="16" fill="#d9a35f" transform="rotate(20 570 420)"/>
+  <path d="M570 407 q8 -13 21 -9 q6 13 -6 20 q-15 6 -19 -4 z" fill="#b87e42"/>
+  <ellipse cx="530" cy="460" rx="20" ry="15" fill="#c98d4f" transform="rotate(-30 530 460)"/>
+  <path d="M530 448 q7 -12 19 -8 q5 12 -6 18 q-13 6 -17 -4 z" fill="#a86c38"/>
+  <!-- 水果 -->
+  <circle cx="300" cy="470" r="34" fill="#e0574e"/>
+  <path d="M300 434 q6 -16 22 -18 q4 16 -6 30 q-18 12 -22 -4 z" fill="#7fae4a"/>
+  <g fill="#ffd97a" stroke="#d9a33a" stroke-width="3">
+    <circle cx="292" cy="470" r="9"/><circle cx="312" cy="466" r="9"/><circle cx="303" cy="482" r="9"/>
+  </g>
+  <circle cx="470" cy="520" r="30" fill="#4f9bd9"/>
+  <path d="M470 488 q5 -14 20 -16 q4 14 -6 26 q-15 10 -20 -4 z" fill="#7fae4a"/>
+  <g fill="#dcecff">
+    <circle cx="463" cy="520" r="6"/><circle cx="478" cy="517" r="6"/><circle cx="471" cy="530" r="6"/>
+  </g>
+</svg>
