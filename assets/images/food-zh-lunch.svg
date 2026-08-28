@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fdf7ec"/><stop offset="1" stop-color="#f3e7d2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" rx="40" fill="url(#bg)"/>
+  <ellipse cx="400" cy="560" rx="250" ry="28" fill="#d9cbb2" opacity="0.45"/>
+  <circle cx="400" cy="420" r="225" fill="#fbf8f1" stroke="#e6ddca" stroke-width="6"/>
+  <circle cx="400" cy="420" r="182" fill="#f2ecdf"/>
+  <!-- 杂粮饭 -->
+  <path d="M420 250 q80 40 88 130 q-60 60 -140 44 q-70 -16 -78 -96 q-4 -60 56 -88 q44 -16 74 10 z" fill="#b98f58"/>
+  <circle cx="430" cy="300" r="9" fill="#cda66d"/>
+  <circle cx="452" cy="330" r="7" fill="#a97f4a"/>
+  <circle cx="410" cy="345" r="8" fill="#cda66d"/>
+  <circle cx="470" cy="290" r="6" fill="#d6b077"/>
+  <circle cx="395" cy="315" r="7" fill="#d6b077"/>
+  <!-- 清蒸鱼 -->
+  <path d="M300 380 q40 -28 100 -10 q90 20 96 96 q6 70 -70 90 q-80 22 -118 -44 q-30 -58 -8 -132 z" fill="#e8b9a2" stroke="#d19a80" stroke-width="5"/>
+  <line x1="360" y1="400" x2="400" y2="540" stroke="#d19a80" stroke-width="5"/>
+  <line x1="420" y1="410" x2="410" y2="545" stroke="#d19a80" stroke-width="5"/>
+  <line x1="330" y1="430" x2="352" y2="500" stroke="#d19a80" stroke-width="5"/>
+  <circle cx="300" cy="396" r="10" fill="#333"/>
+  <!-- 西兰花 -->
+  <g>
+    <circle cx="545" cy="430" r="40" fill="#3f8f4f"/>
+    <circle cx="585" cy="445" r="30" fill="#4a9f5b"/>
+    <circle cx="530" cy="465" r="26" fill="#3f8f4f"/>
+    <circle cx="565" cy="480" r="24" fill="#4a9f5b"/>
+    <rect x="556" y="480" width="10" height="40" rx="5" fill="#5b7f4a"/>
+  </g>
+  <g>
+    <circle cx="240" cy="470" r="30" fill="#3f8f4f"/>
+    <circle cx="272" cy="482" r="22" fill="#4a9f5b"/>
+    <rect x="254" y="492" width="8" height="30" rx="4" fill="#5b7f4a"/>
+  </g>
+  <!-- 木耳点缀 -->
+  <ellipse cx="470" cy="300" rx="16" ry="10" fill="#3b2d22" transform="rotate(-20 470 300)"/>
+  <ellipse cx="480" cy="350" rx="12" ry="8" fill="#4a382b" transform="rotate(15 480 350)"/>
+  <!-- 筷子 -->
+  <line x1="620" y1="240" x2="470" y2="520" stroke="#a06a3f" stroke-width="10" stroke-linecap="round"/>
+  <line x1="665" y1="240" x2="515" y2="520" stroke="#8a5730" stroke-width="10" stroke-linecap="round"/>
+</svg>
