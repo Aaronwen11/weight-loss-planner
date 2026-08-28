@@ -460,3 +460,7 @@ input:focus, select:focus { outline: none; border-color: var(--green-500); }
   margin-top: 10px; padding: 8px 12px; background: var(--blue-100);
   border-radius: 8px; font-size: 13px; color: #1f5f78;
 }
+
+/* ---------- 安装 App 提示 ---------- */
+.install-card { max-width: 860px; margin: 0 auto 26px; text-align: center; }
+.install-card h2 { color: var(--green-700); margin-bottom: 6px; }
