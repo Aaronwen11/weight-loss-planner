@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fdf7ec"/><stop offset="1" stop-color="#f3e7d2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" rx="40" fill="url(#bg)"/>
+  <ellipse cx="400" cy="560" rx="250" ry="28" fill="#d9cbb2" opacity="0.45"/>
+  <circle cx="400" cy="420" r="225" fill="#fbf8f1" stroke="#e6ddca" stroke-width="6"/>
+  <circle cx="400" cy="420" r="182" fill="#f2ecdf"/>
+  <!-- 南瓜 -->
+  <path d="M250 300 q110 -20 120 70 q10 80 -90 96 q-100 14 -118 -70 q-16 -76 88 -96 z" fill="#e8a13a"/>
+  <path d="M250 300 q0 40 6 166" stroke="#c97f22" stroke-width="6" fill="none"/>
+  <path d="M288 330 q30 12 34 58" stroke="#c97f22" stroke-width="5" fill="none"/>
+  <path d="M212 332 q-30 14 -32 60" stroke="#c97f22" stroke-width="5" fill="none"/>
+  <rect x="240" y="280" width="20" height="34" rx="9" fill="#6d8a4a"/>
+  <!-- 凉拌豆腐 -->
+  <g stroke="#e2d4b8" stroke-width="5">
+    <rect x="420" y="400" width="86" height="46" rx="8" fill="#fbf3e0"/>
+    <rect x="420" y="452" width="86" height="46" rx="8" fill="#f4e9d0"/>
+    <rect x="420" y="504" width="86" height="46" rx="8" fill="#fbf3e0"/>
+  </g>
+  <g fill="#2f7d3e">
+    <circle cx="445" cy="410" r="7"/><circle cx="475" cy="416" r="7"/>
+    <circle cx="442" cy="466" r="7"/><circle cx="480" cy="472" r="7"/>
+    <circle cx="448" cy="520" r="7"/><circle cx="478" cy="526" r="7"/>
+  </g>
+  <!-- 清炒时蔬 -->
+  <g>
+    <path d="M520 500 q70 -90 150 -40 q-20 90 -110 86 q-46 -4 -40 -46 z" fill="#3f8f4f"/>
+    <path d="M560 470 q10 30 4 80" stroke="#2f6d3c" stroke-width="5" fill="none"/>
+    <path d="M600 460 q20 30 14 78" stroke="#2f6d3c" stroke-width="5" fill="none"/>
+    <path d="M540 560 q40 -30 90 -20" stroke="#d9cbb2" stroke-width="5" fill="none"/>
+  </g>
+  <!-- 汤碗 -->
+  <path d="M600 300 a70 70 0 0 1 140 0 z" fill="#fff" stroke="#d9cbb2" stroke-width="5"/>
+  <ellipse cx="670" cy="300" rx="70" ry="15" fill="#efe6d6" stroke="#d9cbb2" stroke-width="4"/>
+  <ellipse cx="670" cy="296" rx="56" ry="11" fill="#d8b45f"/>
+  <path d="M636 250 q-4 -22 12 -30" stroke="#c9b797" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M700 244 q14 -26 38 -26" stroke="#c9b797" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg>
