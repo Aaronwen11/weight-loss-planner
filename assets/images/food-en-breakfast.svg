@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fdf7ec"/><stop offset="1" stop-color="#f3e7d2"/>
+    </linearGradient>
+    <linearGradient id="bowl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e8e0f2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" rx="40" fill="url(#bg)"/>
+  <ellipse cx="400" cy="560" rx="250" ry="28" fill="#d9cbb2" opacity="0.45"/>
+  <circle cx="400" cy="430" r="220" fill="#fbf8f1" stroke="#e6ddca" stroke-width="6"/>
+  <circle cx="400" cy="430" r="178" fill="#f2ecdf"/>
+  <!-- 燕麦碗 -->
+  <path d="M140 470 a140 140 0 0 1 280 0 z" fill="url(#bowl)" stroke="#c9bcd8" stroke-width="6"/>
+  <ellipse cx="280" cy="470" rx="140" ry="30" fill="#e9e0f2" stroke="#c9bcd8" stroke-width="5"/>
+  <ellipse cx="280" cy="458" rx="120" ry="22" fill="#e8c990"/>
+  <ellipse cx="268" cy="454" rx="18" ry="10" fill="#dcb878"/>
+  <ellipse cx="300" cy="462" rx="14" ry="8" fill="#d3ad68"/>
+  <!-- 蓝莓 -->
+  <g fill="#4a5a94">
+    <circle cx="252" cy="450" r="13"/><circle cx="282" cy="445" r="13"/><circle cx="310" cy="452" r="13"/>
+    <circle cx="265" cy="468" r="13"/><circle cx="298" cy="466" r="13"/>
+  </g>
+  <path d="M235 420 q-12 -30 6 -52" stroke="#c9b797" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- 煎蛋 -->
+  <ellipse cx="500" cy="420" rx="86" ry="22" fill="#fff" stroke="#e6ddca" stroke-width="5"/>
+  <ellipse cx="500" cy="420" rx="86" ry="52" fill="#fffdf7"/>
+  <ellipse cx="500" cy="424" rx="44" ry="30" fill="#f6c84b"/>
+  <ellipse cx="500" cy="422" rx="26" ry="18" fill="#f8b63a"/>
+  <!-- 全麦吐司 -->
+  <path d="M520 520 h100 v60 a50 50 0 0 1 -100 0 z" fill="#e0b070"/>
+  <path d="M545 520 h50 v60 a25 25 0 0 1 -50 0 z" fill="#c9974e"/>
+  <!-- 牛奶杯 -->
+  <path d="M600 250 l26 90 a30 30 0 0 0 58 0 l26 -90 z" fill="#fff" stroke="#d8d0e0" stroke-width="5"/>
+  <ellipse cx="655" cy="250" rx="55" ry="12" fill="#f4f0fa" stroke="#d8d0e0" stroke-width="4"/>
+</svg>
